@@ -22,7 +22,6 @@ jobs:
           filename: test.js
           cloud: true
           token: ${{ secrets.K6_CLOUD_API_TOKEN }}
-
   build:
     runs-on: unbuntu-latest
     steps:
