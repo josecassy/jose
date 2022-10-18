@@ -1,6 +1,11 @@
-k6_load_test:
-  name: k6 Load Test
-  runs-on: ubuntu-latest
+name: Post welcome comment
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  k6_load_test:
+    name: k6 Load Test
+    runs-on: ubuntu-latest
 
   steps:
     - name: Checkout
