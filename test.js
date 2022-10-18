@@ -1,8 +1,8 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { sleep, check } from 'k6';
 
 export const options = {
-  duration: '1m',
+  duration: '5m',
   vus: 50,
   thresholds: {
     http_req_failed: ['rate<0.01'], // http errors should be less than 1%
@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-  const res = http.get('https://josecassy.github.io/jose/');
+  const res = http.get('https://josecassy.github.io/jose');
   sleep(1);
 }
