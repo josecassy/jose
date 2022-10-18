@@ -1,5 +1,4 @@
 # This is a basic workflow to help to get started with Actios
-
 name: CI
 # Controls when the actions will run.
 on:
